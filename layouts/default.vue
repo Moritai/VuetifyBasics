@@ -1,9 +1,9 @@
 <template>
 <v-app>
     <Navbar />
-    <div class="pages">
+    <v-content>
       <Nuxt />
-    </div>
+    </v-content>
     <Footer/>
 </v-app>
 </template>
@@ -22,7 +22,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .pages{
-    margin-top: 4em;
-  }
+
 </style>
