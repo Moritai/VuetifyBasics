@@ -4,14 +4,18 @@
     <div class="pages">
       <Nuxt />
     </div>
+    <Footer/>
 </v-app>
 </template>
 
 <script>
 import Navbar from '../components/navbar'
+import Footer from '../components/footer'
+
 export default {
 	components: {
-		Navbar
+    Navbar,
+    Footer
   }
    
 }
