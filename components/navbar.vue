@@ -49,7 +49,13 @@
     <!-- ハンバーガーメニューの追加　(クリックすると、drawerの値（true/false）が反転する)-->
     <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
     <!-- ハンバーガーメニューの追加　ここまで -->
-     <v-toolbar-title>Vuetify</v-toolbar-title>
+
+     <!-- <v-toolbar-title to="/enterprise">Vuetify</v-toolbar-title> -->
+     <nuxt-link to="/">
+      <v-toolbar-title class="white--text text--darken-2" v-if="$vuetify.breakpoint.mdOnly">
+        Vuetify
+      </v-toolbar-title>
+    </nuxt-link>
 
 
      <!-- スペース追加 -->
@@ -70,7 +76,7 @@
             <!-- サブヘッダーの設定 -->
           　<v-subheader>Get help</v-subheader>
             <!-- ドロップダウンメニューの個々のリスト作成 -->
-            <v-list-item v-for="support in supports" :key="support" :to="support.link">
+            <v-list-item v-for="support in supports" :key="support.id" :to="support.link">
             <!--　アイコンの設定  -->
             <v-list-item-icon>
               <v-icon>{{ support.icon }}</v-icon>
@@ -96,25 +102,30 @@ export default {
       drawer: null,
       supports:[
         {
+          id: 1,
           name: 'Consulting and suppourt',
           icon: 'mdi-vuetify',
           link:'/consulting-and-support'
         },
         {
+          id: 2,
           name: 'Discord community',
           icon: 'mdi-discord',
           link:'/discord-community'},
         {
+          id: 3,
           name: 'Report a bug',
           icon: 'mdi-bug',
           link:'/report-a-bug'
         },
         {
+          id: 4,
           name: 'Github issue board',
           icon: 'mdi-github-face',
           link:'/guthub-issue-board'
         },
         {
+          id: 5,
           name: 'Stack overview',
           icon: 'mdi-stack-overflow',
           link:'/stack-overview'

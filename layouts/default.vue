@@ -1,9 +1,9 @@
 <template>
 <v-app>
     <Navbar />
-    <v-content>
+    <v-main>
       <Nuxt />
-    </v-content>
+    </v-main>
     <Footer/>
 </v-app>
 </template>
